@@ -1,0 +1,21 @@
+name: First
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output test
+        uses: actions/checkout@v3
+      - run: echo "test is running"
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output lint
+        uses: actions/checkout@v3
+      - run: echo "lint is running"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output build
+        uses: actions/checkout@v3
+      - run: echo "building"
