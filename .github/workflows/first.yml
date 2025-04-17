@@ -28,6 +28,6 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: lint
-        run: npm run link
+        run: npm run lint
       - name: Deploy code
         run: echo "deploying..."
