@@ -1,5 +1,9 @@
-name: First
-on: push
+name: Events demo 1
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
