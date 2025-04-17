@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: Run on Issues
         uses: actions/checkout@v3
-      - run: echo "{{ github }}"
+      - run: echo "{{ toJSON(github.event) }}"
