@@ -19,3 +19,15 @@ jobs:
       - name: output build
         uses: actions/checkout@v3
       - run: echo "building"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment boltey re public
+        uses: actions/checkout@v3
+      - run: echo "deploying"
+      - name: install dependencies
+        run: npm ci
+      - name: lint
+        run: npm run link
+      - name: Deploy code
+        run: echo "deploying..."
