@@ -23,6 +23,15 @@ jobs:
       - name: output build
         uses: actions/checkout@v3
       - run: echo "building"
+      - name: Buil project
+        run: npm run build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: distfiles
+          path: |
+            dist
+            package.json
   deploy:
     runs-on: ubuntu-latest
     steps:
